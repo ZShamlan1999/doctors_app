@@ -1,6 +1,7 @@
 import 'package:appointment/core/routing/app_router.dart';
 import 'package:appointment/core/routing/routes.dart';
 import 'package:appointment/core/theming/colors.dart';
+import 'package:appointment/features/splash/splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -19,7 +20,8 @@ class DocApp extends StatelessWidget {
             primaryColor: ColorsManger.mainBlue,
             scaffoldBackgroundColor: Colors.white),
         debugShowCheckedModeBanner: false,
-        initialRoute: Routes.onBoardingScreen,
+        initialRoute: Routes.splashScreen,
+       
         onGenerateRoute: appRouter.generateRoute,
       ),
     );
