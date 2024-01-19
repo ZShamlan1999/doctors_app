@@ -4,6 +4,11 @@ class AppRegex {
         .hasMatch(email);
   }
 
+   static bool isPhoneNumberValid(String phoneNumber) {
+    return RegExp(r'^(?:[+0]967)?[0-9]{9}$')
+        .hasMatch(phoneNumber);
+  }
+
   static bool isPasswordValid(String password) {
     return RegExp(
             r"^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$")
