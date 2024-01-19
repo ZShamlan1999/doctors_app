@@ -1,6 +1,6 @@
-import 'package:appointment/core/helpers/extensions.dart';
-import 'package:appointment/core/routing/routes.dart';
-import 'package:appointment/core/theming/colors.dart';
+import '../../../core/helpers/extensions.dart';
+import '../../../core/routing/routes.dart';
+import '../../../core/theming/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -23,7 +23,7 @@ class GetStartedButton extends StatelessWidget {
               RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)))),
       child: Text(
         'Get Started',
-        style: TextStyles.font16WhiteSemiBold,
+        style: TextStyles.font16WhiteMedium,
       ),
     );
   }
