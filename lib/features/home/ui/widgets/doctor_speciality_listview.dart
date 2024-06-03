@@ -24,7 +24,7 @@ class DoctorSpecialityListView extends StatelessWidget {
                   radius: 28.r,
                   backgroundColor: ColorsManger.lightBlue,
                   child: SvgPicture.asset(
-                    'assets/svgs/Brain.svg',
+                    'assets/svgs/Iamge.svg',
                     height: 40.h,
                     width: 40.w,
                   ),
