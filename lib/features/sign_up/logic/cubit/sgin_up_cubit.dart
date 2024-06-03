@@ -16,6 +16,7 @@ class SginUpCubit extends Cubit<SginUpState> {
       TextEditingController();
   final formKey = GlobalKey<FormState>();
 
+  
   void emitSignupStates() async {
     emit(const SginUpState.loading());
     final response = await _signUpRepo.signup(

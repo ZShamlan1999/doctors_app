@@ -1,3 +1,5 @@
+import 'package:appointment/core/helpers/extensions.dart';
+import 'package:appointment/core/routing/routes.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -39,8 +41,13 @@ class LoginScreen extends StatelessWidget {
                 verticalSpace(24),
                 Align(
                     alignment: AlignmentDirectional.centerEnd,
-                    child: Text('Forgot Password ?',
-                        style: TextStyles.font13BlueRegular)),
+                    child: GestureDetector(
+                      onTap: () {
+                        context.pushNamed(Routes.otpScreen);
+                      },
+                      child: Text('Forgot Password ?',
+                          style: TextStyles.font13BlueRegular),
+                    )),
                 verticalSpace(40),
                 AppTextButton(
                   buttonText: 'Login',

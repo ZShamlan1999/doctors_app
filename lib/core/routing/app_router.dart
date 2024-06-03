@@ -1,3 +1,6 @@
+import 'package:appointment/features/face/ui/face_screen.dart';
+import 'package:appointment/features/forgot_password/ui/forgot_password_screen.dart';
+import 'package:appointment/features/otp/ui/otp_screen.dart';
 import 'package:appointment/features/sign_up/ui/sign_up_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -16,9 +19,7 @@ class AppRouter {
     final arguments = settings.arguments;
     switch (settings.name) {
       case Routes.onBoardingScreen:
-        return MaterialPageRoute(
-          builder: (_) => const OnBoardingScreen(),
-        );
+        return MaterialPageRoute(builder: (_) => const OnBoardingScreen());
       case Routes.loginScreen:
         return MaterialPageRoute(
           builder: (_) => BlocProvider(
@@ -31,10 +32,14 @@ class AppRouter {
               create: (context) => getIt<SginUpCubit>(),
               child: const SignupScreen()),
         );
+      case Routes.forgotPasswordScreen:
+        return MaterialPageRoute(builder: (_) => const ForgotPasswordScreen());
+      case Routes.otpScreen:
+        return MaterialPageRoute(builder: (_) => const OtpScreen());
+      case Routes.faceScreen:
+        return MaterialPageRoute(builder: (_) => const FaceScreen());
       case Routes.homeScreen:
-        return MaterialPageRoute(
-          builder: (_) => const HomeScreen(),
-        );
+        return MaterialPageRoute(builder: (_) => const HomeScreen());
       default:
         return MaterialPageRoute(
           builder: (_) => Scaffold(

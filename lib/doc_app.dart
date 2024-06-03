@@ -1,3 +1,4 @@
+import 'package:appointment/features/home/ui/home_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -17,10 +18,12 @@ class DocApp extends StatelessWidget {
       child: MaterialApp(
         title: 'Doc App',
         theme: ThemeData(
-            primaryColor: ColorsManger.mainBlue,
-            scaffoldBackgroundColor: Colors.white),
+          primaryColor: ColorsManger.mainBlue,
+          scaffoldBackgroundColor: Colors.white,
+        ),
         debugShowCheckedModeBanner: false,
         initialRoute: Routes.onBoardingScreen,
+        home: const HomeScreen(),
         onGenerateRoute: appRouter.generateRoute,
       ),
     );

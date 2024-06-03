@@ -4,6 +4,7 @@ import '../../../../core/networking/api_service.dart';
 import '../models/sgin_up_response.dart';
 import '../models/sign_up_request_body.dart';
 
+
 class SignUpRepo {
   final ApiService _apiService;
   SignUpRepo(this._apiService);
@@ -18,3 +19,4 @@ class SignUpRepo {
     }
   }
 }
+
