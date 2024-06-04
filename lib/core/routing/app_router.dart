@@ -1,5 +1,7 @@
 import 'package:appointment/features/face/ui/face_screen.dart';
 import 'package:appointment/features/forgot_password/ui/forgot_password_screen.dart';
+import 'package:appointment/features/home/data/repostoey/home_repo.dart';
+import 'package:appointment/features/home/logic/home_cubit.dart';
 import 'package:appointment/features/otp/ui/otp_screen.dart';
 import 'package:appointment/features/sign_up/ui/sign_up_screen.dart';
 import 'package:flutter/material.dart';
@@ -39,7 +41,11 @@ class AppRouter {
       case Routes.faceScreen:
         return MaterialPageRoute(builder: (_) => const FaceScreen());
       case Routes.homeScreen:
-        return MaterialPageRoute(builder: (_) => const HomeScreen());
+        return MaterialPageRoute(
+            builder: (_) => BlocProvider(
+                  create: (context) => HomeCubit(getIt())..getSpecializations(),
+                  child: const HomeScreen(),
+                ));
       default:
         return MaterialPageRoute(
           builder: (_) => Scaffold(

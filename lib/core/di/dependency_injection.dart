@@ -1,3 +1,7 @@
+import 'package:appointment/features/home/data/apis/home_api_service.dart';
+import 'package:appointment/features/home/data/repostoey/home_repo.dart';
+import 'package:appointment/features/home/logic/home_cubit.dart';
+
 import '../../features/sign_up/data/repo/sign_up_repo.dart';
 import '../../features/sign_up/logic/cubit/sgin_up_cubit.dart';
 import 'package:dio/dio.dart';
@@ -23,5 +27,8 @@ Future<void> setupGetIt() async {
   getIt.registerLazySingleton<SignUpRepo>(() => SignUpRepo(getIt()));
   getIt.registerFactory<SginUpCubit>(() => SginUpCubit(getIt()));
 
-
+  // Home
+  getIt.registerLazySingleton<HomeApiService>(() => HomeApiService(dio));
+  getIt.registerLazySingleton<HomeRepo>(() => HomeRepo(getIt()));
+  // getIt.registerFactory<HomeCubit>(() => HomeCubit(getIt()));
 }
