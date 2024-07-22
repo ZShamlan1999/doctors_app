@@ -1,7 +1,7 @@
-import 'package:appointment/features/home/ui/home_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+import 'core/helpers/constens.dart';
 import 'core/routing/app_router.dart';
 import 'core/routing/routes.dart';
 import 'core/theming/colors.dart';
@@ -22,8 +22,8 @@ class DocApp extends StatelessWidget {
           scaffoldBackgroundColor: Colors.white,
         ),
         debugShowCheckedModeBanner: false,
-        // initialRoute: Routes.onBoardingScreen,
-        home: const HomeScreen(),
+        initialRoute: isLoggedInUser ? Routes.homeScreen : Routes.loginScreen,
+        // home: const HomeScreen(),
         onGenerateRoute: appRouter.generateRoute,
       ),
     );

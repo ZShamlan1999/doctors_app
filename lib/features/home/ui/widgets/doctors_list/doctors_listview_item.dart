@@ -2,8 +2,10 @@ import 'package:appointment/features/home/data/moduls/specializations_response_m
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../../../../core/helpers/spacing.dart';
-import '../../../../core/theming/styles.dart';
+import '../../../../../core/helpers/spacing.dart';
+import '../../../../../core/theming/styles.dart';
+
+
 
 class DoctorsListViewItem extends StatelessWidget {
   final Doctors? doctorsModel;
