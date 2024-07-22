@@ -29,6 +29,7 @@ environment:
 # versions available, run `flutter p  build_runner: ^2.4.7
 dependencies:
   build_runner: ^2.4.7
+  cached_network_image: ^3.3.1
   cupertino_icons: ^1.0.2
   dio: ^5.4.0
   easy_localization: ^3.0.3
